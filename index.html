@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="flex flex-col lg:flex-row mt-10 ml-6">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="card w-[330px] bg-base-100 shadow-xl hover:bg-gray-900">
+                    <figure class="mt-8 px-10"><img src="images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="trName" class="card-title mx-auto">Triangle</h2>
+                      <p class="mx-auto">Area (A) = 0.5 x b x h</p>
+                      <p class="mx-auto mt-6">
+                        <input id="input-tr-1" class="border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="base">
+                        <span class="ml-1 mr-4">cm</span>
+
+                        <input id="input-tr-2" class="border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="height">
+                        <span class="ml-1">cm</span>
+                      </p>
+                     <div class="card-actions justify-end">
+                        <button onclick="areaCalculate('tr','input-tr-1','input-tr-2','trName')" class=" btn bg-blue-500 hover:bg-gray-800 text-white px-24 mx-auto mt-6">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-[330px] bg-base-100 shadow-xl hover:bg-gray-900">
+                    <figure class="mt-8 px-10"><img src="images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="reName" class="card-title mx-auto">Rectangle</h2>
+                      <p class="mx-auto">Area (A) = w x l</p>
+                      <p class="mx-auto mt-6">
+                        <input id="input-re-1" class="border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="width">
+                        <span class="ml-1 mr-4">cm</span>
+
+                        <input id="input-re-2" class="border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="length">
+                        <span class="ml-1">cm</span>
+                      </p>
+                     <div class="card-actions justify-end">
+                        <button onclick="areaCalculate('re','input-re-1','input-re-2','reName')" class="btn bg-blue-500 hover:bg-gray-800 text-white px-24 mx-auto mt-6">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-[330px] bg-base-100 shadow-xl hover:bg-gray-900">
+                    <figure class="mt-8 px-10"><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="paName" class="card-title mx-auto">parallelogram</h2>
+                      <p class="mx-auto">Area (A) = b x h</p>
+                      <p class="mx-auto mt-6">
+                        <input id="input-pa-1" class="border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="base">
+                        <span class="ml-1 mr-4">cm</span>
+
+                        <input id="input-pa-2" class="border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="height">
+                        <span class="ml-1">cm</span>
+                      </p>
+                     <div class="card-actions justify-end">
+                        <button onclick="areaCalculate('pa','input-pa-1','input-pa-2','paName')" class="btn bg-blue-500 hover:bg-gray-800 text-white px-24 mx-auto mt-6">Calculate</button>
+                      </div>
+                    </div>
+                  </div> 
+
+                  <div class="card w-[330px] bg-base-100 shadow-xl hover:bg-gray-900">
+                    <figure class="mt-8 px-10"><img src="images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="rhName" class="card-title mx-auto">Rhombus</h2>
+                      <p class="mx-auto">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                      <p class="mx-auto mt-6">
+                        <input id="input-rh-1" class=" border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="d1">
+                        <span class="ml-1 mr-4">cm</span>
+
+                        <input  id="input-rh-2" class=" border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="d2">
+                        <span class="ml-1">cm</span>
+                      </p>
+                     <div class="card-actions justify-end">
+                        <button onclick="areaCalculate('rh','input-rh-1','input-rh-2','rhName')" class="btn bg-blue-500 hover:bg-gray-800 text-white px-24 mx-auto mt-6">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-[330px] bg-base-100 shadow-xl hover:bg-gray-900">
+                    <figure class="mt-8 px-10"><img src="images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="peName" class="card-title mx-auto">Pentagon</h2>
+                      <p class="mx-auto">Area (A) = 0.5 x p x b</p>
+                      <p class="mx-auto mt-6">
+                        <input  id="input-pe-1" class=" border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="p">
+                        <span class="ml-1 mr-4">cm</span>
+
+                        <input id="input-pe-2" class=" border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="b">
+                        <span class="ml-1">cm</span>
+                      </p>
+                     <div class="card-actions justify-end">
+                        <button onclick="areaCalculate('pe','input-pe-1','input-pe-2','peName')" class="btn bg-blue-500 hover:bg-gray-800 text-white px-24 mx-auto mt-6">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card w-[330px] bg-base-100 shadow-xl hover:bg-gray-900">
+                    <figure class="mt-8 px-10"><img src="images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="elName" class="card-title mx-auto">Ellipse</h2>
+                      <p class="mx-auto">Area (A) = πab</p>
+                      <p class="mx-auto mt-6">
+                        <input  id="input-el-1" class=" border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="a">
+                        <span class="ml-1 mr-4">cm</span>
+
+                        <input  id="input-el-2" class=" border w-20 px-2 py-1  bg-gray-700 rounded text-white" type="text" name="" id="" placeholder="b">
+                        <span class="ml-1">cm</span>
+                      </p>
+                     <div class="card-actions justify-end">
+                        <button onclick="areaCalculate('el','input-el-1','input-el-2','elName')" class="btn bg-blue-500 hover:bg-gray-800 text-white px-24 mx-auto mt-6">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+                
+
+            </div>
+            <div class="w-[320px]  border-2 border-gray-200   h-96 mt-8 ml-3">
+                 <h3  class="text-2xl font-semibold underline mt-6 underline-offset-8 text-center">Area Calculate</h3> <div id="calculate-area">
+                    <div id="div1" class="mt-8">
+                      <p id="p1"></p>
+                    <!-- <span id="add-text" class="mt-8 pl-4"> </span>
+                    <span id="add-triangle-area-value"></span>
+                    <span id="add-cm"></span> -->
+                    
+                    </div>
+
+                 </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/utilitis.js"></script>
+    <script src="js/calculate.js"></script>
+</body>
+</html>
